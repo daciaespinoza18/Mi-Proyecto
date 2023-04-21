@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
 
+/* enlaza esta fuente de google fonts  Cera Round Pro */
+@import url('https://fonts.googleapis.com/css2?family=Cera+Round+Pro:wght@400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -15,11 +18,26 @@ nav{
     align-items: center;
     box-sizing: border-box;
     padding: 0 50px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.h2s{
+    color: #fff;
+    background-color: #3043ef; 
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Cera Round Pro', sans-serif !important;
 }
 .containerapp{
     width: 100%;
-    min-height: calc(80vh);
+    min-height: 110vh;
+    padding-bottom: 40px;
 }
 .buscador{
     width: 100%;
@@ -48,7 +66,6 @@ nav{
 }
 .inputcontainer input{
     width: 100%;
-    height: 100%;
     border: none;
     border-radius: 25px;
     padding: 0 10px;
@@ -90,7 +107,6 @@ nav{
 
 }
 .titulo h1{
-    font-size: 30px;
     font-weight: 800;
     letter-spacing: -1px;
     line-height: 110%;
@@ -153,41 +169,77 @@ nav{
 }
 
 footer{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+footer h2{
+    color: #fff;
+}
+
+.cuadro{
     width: 100%;
-    height: 50vh;
+    min-height: 100vh;
     padding: 50px 0px;
     background-size: cover;
     background-color: red;
     opacity: 0.8;
-    background-color: #3043ef;
+    background-image: radial-gradient( circle 767px at 10.2% 22.1%, rgb(97, 149, 228) 0%, #3043ef 90% );
     /*background-color: #d0f0f8;
     -webkit-mask-image: url("../Images/background-footer.svg");
     mask-image: url("../Images/background-footer.svg");
     -webkit-mask-size: cover;
     mask-size: cover;*/
+
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px;
 }
 
-footer::after {
-    width: 96%;
-    height: 60px;
+.after {
+    width: 70%;
+    height: 50px;
     content: "";
-    position: absolute;
     border-radius: 20px;
-    margin-top: -130px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: #f5f5f5;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 100;
 }
-
-footer h1 {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    line-height: 110%;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
+.leftp{
+    box-sizing: border-box;
+    border-right: 5px solid #f5f5f5;
+    border-radius: 5px;
+}
+.infoproyect{
+    width: 33%;
+    padding: 10px;
+    display: flex;
     
+}
+.logos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    
+}
+.logos img{
+    width: 100px;
+    object-fit: contain;
+  
+}
+.text p {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e8eaff;
+    
+    box-sizing: border-box;
+    padding: 20px;
+
+
 }
 ul{
     padding-left: 0 !important;
@@ -196,10 +248,9 @@ ul{
 @media screen and (max-width: 1018px){
     nav{
         height: 10vh !important;
+        padding:  0 10px;
     }
-    h1{
-        font-size: calc(3.375rem + 1.5vw) !important;
-    }
+   
     .inputcontainer{
         height: 10vh !important;
     }
@@ -216,5 +267,12 @@ ul{
     }
     .sinonimos{
         width: 100%;
+    }
+    .cuadro{
+        flex-direction: column;
+    }
+    .infoproyect{
+        width: 100%;
+        padding: 0;
     }
 }
